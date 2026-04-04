@@ -22,3 +22,31 @@ By setting a unknown, randomized password it is impossible for the user to reset
 of the sha3 256 hash, the user is able to find out his password, by "cracking" the hash. It is a basic "proof of work" concept.
 The user cannot find out the password without putting in compute power and by adjusting the length of the password the user can set his "timer".
 The whole process is limited by hardware and time, so there is no way for the user to "cheat" by finding out the password by using some other method.
+
+## How to use it:
+
+### Prerequisites
+
+- Python 3 installed on your system.
+
+### Usage
+
+Run the script with the desired password length as an argument:
+
+```bash
+python main.py <length>
+```
+
+Where `<length>` is the number of characters for the generated password.
+
+### Example
+
+```bash
+python main.py 12
+```
+
+This will:
+
+1. Generate a random 12-character password (using a-z, A-Z, 0-9).
+2. Print the SHA3-256 hash of the password to the console.
+3. Save the password to `passwd.txt` and the hash to `hash.txt`.
