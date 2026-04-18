@@ -75,8 +75,10 @@ def main():
 
     passwd_hash = generate_hash(password)
 
+    password_file_template = f"""{passwd_hash}\npassword length: {length}"""
+
     write_to_file(password, PASSW_FILE_NAME)
-    write_to_file(passwd_hash, HASH_FILE_NAME)
+    write_to_file(password_file_template, HASH_FILE_NAME)
 
     print(passwd_hash)
 
